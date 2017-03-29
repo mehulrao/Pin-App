@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-eV-uKy">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qL-eV-uKy">
                                 <rect key="frame" x="164" y="106" width="46" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="PIN"/>
@@ -31,7 +31,7 @@
                                     <action selector="PinButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Fg-xh-yIn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Current Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MB6-ti-exO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MB6-ti-exO">
                                 <rect key="frame" x="130" y="323" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MB6-ti-exO" secondAttribute="height" multiplier="38:7" id="5ZU-QD-AaK"/>
@@ -40,7 +40,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-fR-0Rr">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEm-fR-0Rr">
                                 <rect key="frame" x="154" y="507" width="67" height="38"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="UNPIN"/>
@@ -56,6 +56,12 @@
                                     <action selector="RespringButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jA-dV-DK9"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Root Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Glg-im-KU9">
+                                <rect key="frame" x="116" y="215" width="142" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -64,20 +70,25 @@
                             <constraint firstItem="5qL-eV-uKy" firstAttribute="top" secondItem="RH4-WU-7YV" secondAttribute="bottom" constant="58" id="BKS-lD-TlJ"/>
                             <constraint firstItem="gEm-fR-0Rr" firstAttribute="top" secondItem="MB6-ti-exO" secondAttribute="bottom" constant="163" id="EbG-n2-asc"/>
                             <constraint firstItem="5qL-eV-uKy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="JO0-0b-Ddz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Glg-im-KU9" secondAttribute="trailing" constant="101" id="OSh-Gv-AnD"/>
+                            <constraint firstItem="MB6-ti-exO" firstAttribute="top" secondItem="Glg-im-KU9" secondAttribute="bottom" constant="78" id="P2X-A4-kte"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RH4-WU-7YV" secondAttribute="trailing" constant="132" id="RgV-Nr-kJg"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5qL-eV-uKy" secondAttribute="trailing" constant="149" id="SVM-tu-HHu"/>
                             <constraint firstItem="MB6-ti-exO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="114" id="UOj-0O-Yzo"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gEm-fR-0Rr" secondAttribute="trailing" constant="138" id="dKR-bm-gc2"/>
                             <constraint firstItem="MB6-ti-exO" firstAttribute="top" secondItem="5qL-eV-uKy" secondAttribute="bottom" constant="178" id="jAa-gQ-niQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MB6-ti-exO" secondAttribute="trailing" constant="115" id="lCm-5t-4FF"/>
+                            <constraint firstItem="Glg-im-KU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="100" id="lg3-OR-vAz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gEm-fR-0Rr" secondAttribute="bottom" constant="122" id="m5k-K3-ekl"/>
                             <constraint firstItem="gEm-fR-0Rr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="138" id="nNg-4Z-hPy"/>
                             <constraint firstItem="MB6-ti-exO" firstAttribute="top" secondItem="5qL-eV-uKy" secondAttribute="bottom" constant="178" id="ra3-pX-dxd"/>
                             <constraint firstItem="RH4-WU-7YV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="131" id="vkS-Kv-zqK"/>
+                            <constraint firstItem="Glg-im-KU9" firstAttribute="top" secondItem="5qL-eV-uKy" secondAttribute="bottom" constant="70" id="xSh-fT-6rK"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="StatusLabel" destination="MB6-ti-exO" id="eIO-Yg-ePX"/>
+                        <outlet property="password" destination="Glg-im-KU9" id="Shi-eK-5Se"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
