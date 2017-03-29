@@ -1,0 +1,5 @@
+# Pin-App
+Pins Gandalf to DPKG
+
+
+THIS SHOULD BE USED WITH GANDALF
